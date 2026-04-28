@@ -1,0 +1,20 @@
+[0.382s] Invoking command in '/home/seeya/ros2_ws/build/gesture_control': PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/seeya/ros2_ws/build/gesture_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seeya/ros2_ws/install/gesture_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seeya/ros2_ws/build/gesture_control/build --no-deps symlink_data --force
+[0.540s] running develop
+[0.628s] running egg_info
+[0.628s] writing gesture_control.egg-info/PKG-INFO
+[0.628s] writing dependency_links to gesture_control.egg-info/dependency_links.txt
+[0.629s] writing entry points to gesture_control.egg-info/entry_points.txt
+[0.629s] writing requirements to gesture_control.egg-info/requires.txt
+[0.629s] writing top-level names to gesture_control.egg-info/top_level.txt
+[0.630s] reading manifest file 'gesture_control.egg-info/SOURCES.txt'
+[0.630s] writing manifest file 'gesture_control.egg-info/SOURCES.txt'
+[0.631s] running build_ext
+[0.631s] Creating /home/seeya/ros2_ws/install/gesture_control/lib/python3.10/site-packages/gesture-control.egg-link (link to .)
+[0.631s] Installing gesture_node script to /home/seeya/ros2_ws/install/gesture_control/lib/gesture_control
+[0.631s] 
+[0.631s] Installed /home/seeya/ros2_ws/build/gesture_control
+[0.632s] running symlink_data
+[0.632s] symbolically linking /home/seeya/ros2_ws/build/gesture_control/resource/gesture_control -> /home/seeya/ros2_ws/install/gesture_control/share/ament_index/resource_index/packages
+[0.632s] symbolically linking /home/seeya/ros2_ws/build/gesture_control/package.xml -> /home/seeya/ros2_ws/install/gesture_control/share/gesture_control
+[0.632s] symbolically linking /home/seeya/ros2_ws/build/gesture_control/gesture_control/gesture_model.pkl -> /home/seeya/ros2_ws/install/gesture_control/share/gesture_control
+[0.651s] Invoked command in '/home/seeya/ros2_ws/build/gesture_control' returned '0': PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/seeya/ros2_ws/build/gesture_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/seeya/ros2_ws/install/gesture_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/seeya/ros2_ws/build/gesture_control/build --no-deps symlink_data --force
