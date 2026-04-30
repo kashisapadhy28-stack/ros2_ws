@@ -10,7 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-            ('share/gesture_control', ['gesture_control/gesture_model.pkl']),
+        ('share/gesture_control', ['gesture_control/gesture_model.pkl']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -25,7 +25,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'gesture_node = gesture_control.detect_gesture:main',
+            'detect_gesture = gesture_control.detect_gesture:main',
         ],
     },
 )
