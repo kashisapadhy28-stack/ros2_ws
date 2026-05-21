@@ -11,6 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/gesture_control', ['gesture_control/gesture_model.pkl']),
+        ('share/gesture_control/launch', ['launch/gesture_system.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -26,6 +27,9 @@ setup(
     entry_points={
         'console_scripts': [
             'detect_gesture = gesture_control.detect_gesture:main',
+            'led_node = gesture_control.led_node:main',
+            'led_controller = gesture_control.led_controller:main',
+            
         ],
     },
 )

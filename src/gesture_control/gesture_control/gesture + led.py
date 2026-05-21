@@ -4,10 +4,10 @@ import numpy as np
 import joblib
 from collections import deque
 import os
-import rclpy
-from rclpy.node import Node
-from std_msgs.msg import String
-
+from gpiozero import LED
+from time import sleep
+import threading
+led = LED(17)
 from ament_index_python.packages import get_package_share_directory
 
 # ---------------- LOAD MODEL ----------------
@@ -17,16 +17,6 @@ model_path = os.path.join(pkg_path, 'gesture_model.pkl')
 print("MODEL PATH:", model_path)
 
 model = joblib.load(model_path)
-# ---------------- ROS2 PUBLISHER ----------------
-rclpy.init()
-
-node = Node("gesture_publisher")
-
-publisher = node.create_publisher(
-    String,
-    "/gesture",
-    10
-)
 
 # ---------------- MEDIAPIPE ----------------
 mp_hands = mp.solutions.hands
@@ -58,6 +48,117 @@ gesture_to_command = {
 }
 
 last_command = ""
+
+# def led_pattern(command):
+#     print("LED FUNCTION:", command)
+
+#     # led.off()  # reset before new pattern
+
+#     if command == "STAY":
+#         led.on()
+
+#     elif command == "STOP":
+#         led.off()
+
+#     elif command == "WALK":
+#         for _ in range(3):
+#             led.on()
+#             sleep(1)
+#             led.off()
+#             sleep(1)
+
+#     elif command == "BACKWARD":
+#         for _ in range(6):
+#             led.on()
+#             sleep(0.2)
+#             led.off()
+#             sleep(0.2)
+
+#     elif command == "SIT_DOWN":
+#         for _ in range(2):
+#             led.on()
+#             sleep(0.5)
+#             led.off()
+#             sleep(0.5)
+
+#     elif command == "STAND":
+#         for _ in range(5):
+#             led.on()
+#             sleep(0.1)
+#             led.off()
+#             sleep(0.1)
+
+#     elif command == "NAMASTE":
+#         for _ in range(3):
+#             led.on()
+#             sleep(0.7)
+#             led.off()
+#             sleep(0.7)
+
+#     elif command == "FORWARD":
+#         led.on()
+#         sleep(0.1)
+#         led.off()
+def led_worker(command):
+
+    print("LED FUNCTION:", command)
+
+    if command == "STAY":
+        led.on()
+
+    elif command == "STOP":
+        led.off()
+
+    elif command == "WALK":
+        for _ in range(3):
+            led.on()
+            sleep(1)
+            led.off()
+            sleep(1)
+
+    elif command == "BACKWARD":
+        for _ in range(6):
+            led.on()
+            sleep(0.2)
+            led.off()
+            sleep(0.2)
+
+    elif command == "SIT_DOWN":
+        for _ in range(2):
+            led.on()
+            sleep(0.5)
+            led.off()
+            sleep(0.5)
+
+    elif command == "STAND":
+        for _ in range(5):
+            led.on()
+            sleep(0.1)
+            led.off()
+            sleep(0.1)
+
+    elif command == "NAMASTE":
+        for _ in range(3):
+            led.on()
+            sleep(0.7)
+            led.off()
+            sleep(0.7)
+
+    elif command == "FORWARD":
+        led.on()
+        sleep(0.1)
+        led.off()
+
+
+def led_pattern(command):
+
+    thread = threading.Thread(
+        target=led_worker,
+        args=(command,),
+        daemon=True
+    )
+
+    thread.start()
 
 # ---------------- MAIN LOOP ----------------
 while True:
@@ -102,14 +203,10 @@ while True:
                 command = gesture_to_command[gesture]
 
                 if command != last_command:
-                    # print("Robot Command:", command)
-                    msg = String()
-                    msg.data = command
-
-                    publisher.publish(msg)
-
-                    print("Published:", command)
+                    print("Robot Command:", command)
+                    led_pattern(command)
                     last_command = command
+                    # sleep(0.3)
 
     # ---------------- DISPLAY ----------------
     cv2.putText(frame, f"{gesture}", (10, 50),
@@ -123,3 +220,6 @@ while True:
 # ---------------- CLEANUP ----------------
 cap.release()
 cv2.destroyAllWindows()
+
+
+
