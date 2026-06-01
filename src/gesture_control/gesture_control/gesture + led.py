@@ -27,7 +27,7 @@ hands = mp_hands.Hands(
 )
 
 # ---------------- CAMERA ----------------
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
 
 if not cap.isOpened():
     print("❌ Camera not detected")

@@ -17,16 +17,30 @@ model_path = os.path.join(pkg_path, 'gesture_model.pkl')
 print("MODEL PATH:", model_path)
 
 model = joblib.load(model_path)
+
 # ---------------- ROS2 PUBLISHER ----------------
-rclpy.init()
+# rclpy.init()
 
-node = Node("gesture_publisher")
+# node = Node("gesture_publisher")
 
-publisher = node.create_publisher(
-    String,
-    "/gesture",
-    10
-)
+# publisher = node.create_publisher(
+#     String,
+#     "/gesture",
+#     10
+# )
+
+class GesturePublisher(Node):
+
+    def __init__(self):
+        super().__init__('gesture_publisher')
+
+        self.publisher_ = self.create_publisher(
+            String,
+            '/gesture',
+            10
+        )
+
+        self.get_logger().info("Gesture Publisher Started")
 
 # ---------------- MEDIAPIPE ----------------
 mp_hands = mp.solutions.hands
@@ -36,8 +50,12 @@ hands = mp_hands.Hands(
     min_tracking_confidence=0.7
 )
 
+rclpy.init()
+
+node = GesturePublisher()
+
 # ---------------- CAMERA ----------------
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
 
 if not cap.isOpened():
     print("❌ Camera not detected")
@@ -106,7 +124,8 @@ while True:
                     msg = String()
                     msg.data = command
 
-                    publisher.publish(msg)
+                    # publisher.publish(msg)
+                    node.publisher_.publish(msg)
 
                     print("Published:", command)
                     last_command = command
@@ -114,6 +133,7 @@ while True:
     # ---------------- DISPLAY ----------------
     cv2.putText(frame, f"{gesture}", (10, 50),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+    rclpy.spin_once(node, timeout_sec=0)
 
     cv2.imshow("AI Gesture Control", frame)
 

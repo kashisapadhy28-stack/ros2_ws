@@ -1,0 +1,361 @@
+<?xml version="1.0" ?>
+<robot name="kashisa" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.20044273895362388 0.025241457931874628 -0.10004377551623893" rpy="0 0 0"/>
+    <mass value="31.931098752935476"/>
+    <inertia ixx="0.119193" iyy="0.538984" izz="0.433308" ixy="-1.1e-05" iyz="4.2e-05" ixz="-7.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/base_link.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/base_link.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component10_1">
+  <inertial>
+    <origin xyz="-0.05974102429528855 7.450580638557192e-10 0.00037406783885677447" rpy="0 0 0"/>
+    <mass value="1.8078662851830212"/>
+    <inertia ixx="0.000759" iyy="0.001659" izz="0.001637" ixy="0.0" iyz="0.0" ixz="2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.38 -0.025 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component10_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.38 -0.025 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component10_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component11_1">
+  <inertial>
+    <origin xyz="-0.05974068738621018 7.450580534473783e-10 0.00037406783885677447" rpy="0 0 0"/>
+    <mass value="1.8078662851830212"/>
+    <inertia ixx="0.000759" iyy="0.001659" izz="0.001637" ixy="-0.0" iyz="-0.0" ixz="2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.079263 -0.025 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component11_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.079263 -0.025 -0.045" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component11_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component12_1">
+  <inertial>
+    <origin xyz="-0.07021108490906144 7.450580569168253e-10 -0.0018987203186763835" rpy="0 0 0"/>
+    <mass value="0.3460642898443814"/>
+    <inertia ixx="6.8e-05" iyy="0.000856" izz="0.000918" ixy="0.0" iyz="0.0" ixz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.29 -0.025 -0.0775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component12_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.29 -0.025 -0.0775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component12_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component13_1">
+  <inertial>
+    <origin xyz="8.000530321572441e-09 -0.06136164970702396 -0.0025000000000000022" rpy="0 0 0"/>
+    <mass value="0.30563115003100577"/>
+    <inertia ixx="0.000645" iyy="6.2e-05" izz="0.000706" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.16 -0.025 -0.085" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component13_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.16 -0.025 -0.085" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component13_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component14_1">
+  <inertial>
+    <origin xyz="-0.07021074815213399 3.4266314438702317e-10 -0.0018987203196925706" rpy="0 0 0"/>
+    <mass value="0.346064290429252"/>
+    <inertia ixx="6.8e-05" iyy="0.000856" izz="0.000918" ixy="-0.0" iyz="0.0" ixz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.010737 -0.025 -0.0775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component14_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.010737 -0.025 -0.0775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component14_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component15_1">
+  <inertial>
+    <origin xyz="3.4227347861515156e-07 -0.06136165065495081 -0.0025000000000000022" rpy="0 0 0"/>
+    <mass value="0.30563114725287055"/>
+    <inertia ixx="0.000645" iyy="6.2e-05" izz="0.000706" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.140737 -0.025 -0.085" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component15_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.140737 -0.025 -0.085" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component15_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component16_1">
+  <inertial>
+    <origin xyz="-0.05974102995770275 0.0 -0.00037406783882965033" rpy="0 0 0"/>
+    <mass value="1.8078662851830203"/>
+    <inertia ixx="0.000759" iyy="0.001659" izz="0.001637" ixy="-0.0" iyz="0.0" ixz="-2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.38 -0.025 0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component16_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.38 -0.025 0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component16_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component17_1">
+  <inertial>
+    <origin xyz="-0.07021109057150285 1.734723475976807e-17 0.001898720318676439" rpy="0 0 0"/>
+    <mass value="0.3460642898443824"/>
+    <inertia ixx="6.8e-05" iyy="0.000856" izz="0.000918" ixy="0.0" iyz="0.0" ixz="-1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.29 -0.025 0.2775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component17_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.29 -0.025 0.2775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component17_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component18_1">
+  <inertial>
+    <origin xyz="-2.4917207777308548e-05 -0.06136029526633242 0.0025000000000000022" rpy="0 0 0"/>
+    <mass value="0.30593567597444016"/>
+    <inertia ixx="0.000646" iyy="6.2e-05" izz="0.000706" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.16 -0.025 0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component18_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.16 -0.025 0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component18_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component19_1">
+  <inertial>
+    <origin xyz="-0.059741029957702745 0.0 -0.00037406783882965033" rpy="0 0 0"/>
+    <mass value="1.8078662851830203"/>
+    <inertia ixx="0.000759" iyy="0.001659" izz="0.001637" ixy="0.0" iyz="0.0" ixz="-2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.075 -0.025 0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component19_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.075 -0.025 0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component19_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component20_1">
+  <inertial>
+    <origin xyz="-0.06509942111479715 -6.938893903907228e-18 0.001862572360654513" rpy="0 0 0"/>
+    <mass value="0.32643928984438253"/>
+    <inertia ixx="6.4e-05" iyy="0.000715" izz="0.000773" ixy="-0.0" iyz="0.0" ixz="-1.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.015 -0.025 0.2775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component20_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.015 -0.025 0.2775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component20_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component21_1">
+  <inertial>
+    <origin xyz="0.0002333782747266644 -0.06136846857430758 0.0025000000000000022" rpy="0 0 0"/>
+    <mass value="0.303237728159071"/>
+    <inertia ixx="0.000643" iyy="6e-05" izz="0.000702" ixy="1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.135 -0.025 0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component21_1.stl" scale="1 1 1"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.135 -0.025 0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://kashisa_description/meshes/Component21_1.stl" scale="1 1 1"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="revolute_1" type="continuous">
+  <origin xyz="0.38 0.025 0.045" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Component10_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="revolute_2" type="continuous">
+  <origin xyz="0.079263 0.025 0.045" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Component11_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="revolute_3" type="continuous">
+  <origin xyz="-0.09 0.0 0.0325" rpy="0 0 0"/>
+  <parent link="Component10_1"/>
+  <child link="Component12_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="revolute_4" type="continuous">
+  <origin xyz="-0.13 0.0 0.0075" rpy="0 0 0"/>
+  <parent link="Component12_1"/>
+  <child link="Component13_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="revolute_5" type="continuous">
+  <origin xyz="-0.09 0.0 0.0325" rpy="0 0 0"/>
+  <parent link="Component11_1"/>
+  <child link="Component14_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="revolute_6" type="continuous">
+  <origin xyz="-0.13 0.0 0.0075" rpy="0 0 0"/>
+  <parent link="Component14_1"/>
+  <child link="Component15_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="revolute_7" type="continuous">
+  <origin xyz="0.38 0.025 -0.245" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Component16_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="revolute_8" type="continuous">
+  <origin xyz="-0.09 0.0 -0.0325" rpy="0 0 0"/>
+  <parent link="Component16_1"/>
+  <child link="Component17_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="revolute_9" type="continuous">
+  <origin xyz="-0.13 0.0 -0.0075" rpy="0 0 0"/>
+  <parent link="Component17_1"/>
+  <child link="Component18_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="revolute_10" type="continuous">
+  <origin xyz="0.075 0.025 -0.245" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Component19_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="revolute_11" type="continuous">
+  <origin xyz="-0.09 0.0 -0.0325" rpy="0 0 0"/>
+  <parent link="Component19_1"/>
+  <child link="Component20_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="revolute_12" type="continuous">
+  <origin xyz="-0.12 0.0 -0.0075" rpy="0 0 0"/>
+  <parent link="Component20_1"/>
+  <child link="Component21_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+</robot>

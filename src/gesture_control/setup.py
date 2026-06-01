@@ -29,6 +29,7 @@ setup(
             'detect_gesture = gesture_control.detect_gesture:main',
             'led_node = gesture_control.led_node:main',
             'led_controller = gesture_control.led_controller:main',
+            'motor_control = gesture_control.motor_control:main',
             
         ],
     },

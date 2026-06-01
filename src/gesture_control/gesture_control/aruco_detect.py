@@ -1,7 +1,7 @@
 import cv2
 import cv2.aruco as aruco
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
 
 if not cap.isOpened():
     print("Error: Cannot open camera")
